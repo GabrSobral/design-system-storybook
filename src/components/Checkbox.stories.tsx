@@ -6,15 +6,17 @@ import { Text } from "./Text";
 export default {
   title: "Components/Checkbox",
   component: Checkbox,
-  args: {},
+  args: {
+    id: "remember"
+  },
   argTypes: {},
   decorators: [
     Story => {
       return (
-        <div className="flex gap-2 items-center">
+        <label htmlFor="remember" className="flex gap-2 items-center">
           {Story()}
           <Text size="sm">Lembrar-me de mim por 30 dias</Text>
-        </div>
+        </label>
       )
     }
   ]
